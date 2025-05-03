@@ -25,7 +25,7 @@ except Exception as e:
 # Daily screening conditions with detailed logging
 def passes_screening(ticker):
     try:
-        hist = yf.download(ticker, period="1y", interval="1d", progress=False)
+        hist = yf.download(ticker, period="1y", interval="15", progress=False)
         if DEBUG:
             st.text(f"{ticker} historical data tail:\n{hist.tail()}\n")
 
