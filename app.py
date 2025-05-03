@@ -50,7 +50,8 @@ def get_sp500_tickers():
 
 @st.cache_data(show_spinner=False)
 def get_screened_tickers():
-    tickers = get_sp500_tickers()
+    # tickers = get_sp500_tickers()
+    tickers = ['^NSEI']
     screened = []
     for ticker in tickers:
         if passes_screening(ticker):
